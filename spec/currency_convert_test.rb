@@ -21,9 +21,7 @@ class CurrencyConvertTest < Minitest::Test
   end
 
   def test_convert_simple_conversion
-    currency_converter_earlier = CurrencyConvert.new( { "USD" => 1.0, "EUR" => 0.90813,"CAD" => 1.22790} )
-    currency_converter_later = CurrencyConvert.new( { "USD" => 1.0, "EUR" => 0.91813,"CAD" => 1.20790} )
-    my_money = Current.new*(1000000,"USD")
+    currency_converter= CurrencyConvert.new( { "USD" => 1.0, "EUR" => 0.90813,"CAD" => 1.22790} )
     test_10_usd = Currency.new(10,"USD")
     assert_equal(Currency.new(9.0813, "EUR"), currency_converter.convert(test_10_usd, "EUR"))
     assert_equal(Currency.new(12.2790, "CAD"), currency_converter.convert(test_10_usd, "CAD"))
