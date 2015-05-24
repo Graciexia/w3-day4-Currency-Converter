@@ -22,6 +22,14 @@ class CurrencyConvert
       raise UnknownCurrencyCodeError
     end
   end
+
+# def -(other)
+#  if other.is_a?(CurrencyConvert) && other.code_new == code_new
+#   @amount -= other.amount
+# else
+#  raise  DifferentCurrencyCodeError
+# end
+#   end
 end
 
 
